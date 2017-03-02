@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: book
+  cloud:
+    config:
+      uri: http://localhost:8889
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+management:
+  security:
+    enabled: false
