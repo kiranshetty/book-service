@@ -14,20 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BookServiceApplication  {
 
-  @Value("${name:name not found}")
-  String name;
+  @Value("${service:service not found}")
+  String service;
 
-  @Value("${gender:gender not found}")
-  String gender;
+  @Value("${endpoint:endpoint not found}")
+  String endpoint;
 
   @RequestMapping("/")
   public String home() {
 	  
-	  StringBuilder strBuilder = new StringBuilder("Hello ");
-	  strBuilder.append(name);
+	  StringBuilder strBuilder = new StringBuilder("Service Name: ");
+	  strBuilder.append(service);
 	  strBuilder.append("<br>");
-	  strBuilder.append("Gender: ");
-	  strBuilder.append(gender);
+	  strBuilder.append("Endpoint: ");
+	  strBuilder.append(endpoint);
 	  
     return strBuilder.toString();
   }
